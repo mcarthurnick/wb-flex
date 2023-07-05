@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo | CSS: Position, Flex, and Overflow</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>CSS: Position, Flex, and Overflow Demo</h1>
+      </header>
+      <section id="position-demo">
+        <h2>Position examples</h2>
+
+        <h3>Static</h3>
+        <div class="example">
+          <div class="box blue">One</div>
+          <div class="box pink">Static</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Relative</h3>
+        <div class="example">
+          <style>
+            #relative-box {
+              position: relative;
+              top: 30px;
+            }
+          </style>
+
+          <div class="box blue">One</div>
+          <div id="relative-box" class="box pink">Relative</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Absolute</h3>
+        <div class="example">
+          <style>
+            #absolute-box {
+              position: absolute;
+              top: 5px;
+            }
+          </style>
+
+          <div class="box blue">One</div>
+          <div id="absolute-box" class="box pink">Absolute</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Fixed</h3>
+        <div class="example">
+          <style>
+            #fixed-box {
+              position: fixed;
+              bottom: 0;
+              right: 0;
+            }
+          </style>
+
+          <div class="box blue">One</div>
+          <div id="fixed-box" class="box pink">Fixed</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Sticky</h3>
+        <div class="sticky-container bordered example">
+          <style>
+            #sticky-box {
+              position: sticky;
+              top: 0;
+            }
+          </style>
+
+          <div class="box blue">One</div>
+          <div id="sticky-box" class="box pink">Sticky</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+      </section>
+
+      <section id="display-demo">
+        <h2>Display examples</h2>
+
+        <h3>Block</h3>
+        <div class="example">
+          <div class="box blue">One</div>
+          <div class="box pink">Static</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Inline</h3>
+        <div id="d-inline" class="example">
+          <style>
+            #d-inline .box {
+              display: inline;
+            }
+          </style>
+          <div class="box blue">One</div>
+          <div class="box pink">Static</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Inline-block</h3>
+        <div id="d-inline-block" class="example">
+          <style>
+            #d-inline-block .box {
+              display: inline-block;
+            }
+          </style>
+          <div class="box blue">One</div>
+          <div class="box pink">Static</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+
+        <h3>Flex</h3>
+        <div id="d-flex" class="example">
+          <style>
+            #d-flex .box {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          </style>
+          <div class="box blue">One</div>
+          <div class="box pink">Static</div>
+          <div class="box blue">Three</div>
+          <div class="box blue">Four</div>
+        </div>
+      </section>
+
+      <section id="flex-demo">
+        <h2>Flex examples</h2>
+
+        <h3>Default flex box</h3>
+        <div class="example">
+          <style>
+            #flex-container {
+              display: flex;
+              /* default flex-direction: row */
+            }
+          </style>
+          <div id="flex-container">
+            <div class="box blue">Flex item #1</div>
+            <div class="box pink">Flex item #2</div>
+            <div class="box blue">Flex item #3</div>
+            <div class="box blue">Flex item #4</div>
+          </div>
+        </div>
+
+        <h3>Flex direction: column</h3>
+        <div class="example">
+          <style>
+            #flex-column {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+          <div id="flex-column">
+            <div class="box blue">Flex item #1</div>
+            <div class="box pink">Flex item #2</div>
+            <div class="box blue">Flex item #3</div>
+            <div class="box blue">Flex item #4</div>
+          </div>
+        </div>
+
+        <h3>Flex wrap</h3>
+        <div class="example">
+          <style>
+            #flex-wrap {
+              display: flex;
+              width: 240px;
+              flex-wrap: wrap;
+              /* flex-wrap: wrap-reverse; */
+            }
+          </style>
+          <div id="flex-wrap" class="bordered">
+            <div class="box blue">Flex item #1</div>
+            <div class="box pink">Flex item #2</div>
+            <div class="box blue">Flex item #3</div>
+            <div class="box blue">Flex item #4</div>
+          </div>
+        </div>
+
+        <h3>Distributing space</h3>
+        <div class="example">
+          <style>
+            #flex-space {
+              display: flex;
+              justify-content: space-around;
+              /* justify-content: space-between; */
+              /* justify-content: space-evenly; */
+              /* justify-content: flex-start; */
+              /* justify-content: flex-end; */
+              /* justify-content: center; */
+            }
+          </style>
+          <div id="flex-space">
+            <div class="box blue">Flex item #1</div>
+            <div class="box pink">Flex item #2</div>
+            <div class="box blue">Flex item #3</div>
+            <div class="box blue">Flex item #4</div>
+          </div>
+        </div>
+
+        <h3>Centering content</h3>
+        <div class="example">
+          <style>
+            #flex-centering {
+              display: flex;
+              height: 300px;
+              justify-content: center;
+              align-items: center;
+            }
+          </style>
+          <div id="flex-centering" class="bordered">
+            <div class="box blue">Flex item #1</div>
+            <div class="box pink">Flex item #2</div>
+            <div class="box blue">Flex item #3</div>
+            <div class="box blue">Flex item #4</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overflow-demo">
+        <h2>Overflow examples</h2>
+
+        <h3>Overflow visible</h3>
+        <div class="example">
+          <style>
+            #overflow-visible {
+              height: 200px;
+              overflow: visible;
+            }
+          </style>
+          <div id="overflow-visible" class="bordered">
+            <p>
+              Cascading Style Sheets (CSS) is a style sheet language used for describing the
+              presentation of a document written in a markup language such as HTML or XML (including
+              XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the
+              World Wide Web, alongside HTML and JavaScript.
+            </p>
+            <p>
+              CSS is designed to enable the separation of content and presentation, including
+              layout, colors, and fonts. This separation can improve content accessibility; provide
+              more flexibility and control in the specification of presentation characteristics;
+              enable multiple web pages to share formatting by specifying the relevant CSS in a
+              separate .css file, which reduces complexity and repetition in the structural content;
+              and enable the .css file to be cached to improve the page load speed between the pages
+              that share the file and its formatting.
+            </p>
+            <p>
+              Separation of formatting and content also makes it feasible to present the same markup
+              page in different styles for different rendering methods, such as on-screen, in print,
+              by voice (via speech-based browser or screen reader), and on Braille-based tactile
+              devices. CSS also has rules for alternate formatting if the content is accessed on a
+              mobile device.
+            </p>
+          </div>
+        </div>
+
+        <h3>Overflow hidden</h3>
+        <div class="example">
+          <style>
+            #overflow-hidden {
+              height: 200px;
+              overflow: hidden;
+            }
+          </style>
+          <div id="overflow-hidden" class="bordered">
+            <p>
+              Cascading Style Sheets (CSS) is a style sheet language used for describing the
+              presentation of a document written in a markup language such as HTML or XML (including
+              XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the
+              World Wide Web, alongside HTML and JavaScript.
+            </p>
+            <p>
+              CSS is designed to enable the separation of content and presentation, including
+              layout, colors, and fonts. This separation can improve content accessibility; provide
+              more flexibility and control in the specification of presentation characteristics;
+              enable multiple web pages to share formatting by specifying the relevant CSS in a
+              separate .css file, which reduces complexity and repetition in the structural content;
+              and enable the .css file to be cached to improve the page load speed between the pages
+              that share the file and its formatting.
+            </p>
+            <p>
+              Separation of formatting and content also makes it feasible to present the same markup
+              page in different styles for different rendering methods, such as on-screen, in print,
+              by voice (via speech-based browser or screen reader), and on Braille-based tactile
+              devices. CSS also has rules for alternate formatting if the content is accessed on a
+              mobile device.
+            </p>
+          </div>
+        </div>
+
+        <h3>Overflow scroll</h3>
+        <div class="example">
+          <style>
+            #overflow-scroll {
+              height: 200px;
+              overflow: scroll;
+            }
+          </style>
+          <div id="overflow-scroll" class="bordered">
+            <p>
+              Cascading Style Sheets (CSS) is a style sheet language used for describing the
+              presentation of a document written in a markup language such as HTML or XML (including
+              XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the
+              World Wide Web, alongside HTML and JavaScript.
+            </p>
+            <p>
+              CSS is designed to enable the separation of content and presentation, including
+              layout, colors, and fonts. This separation can improve content accessibility; provide
+              more flexibility and control in the specification of presentation characteristics;
+              enable multiple web pages to share formatting by specifying the relevant CSS in a
+              separate .css file, which reduces complexity and repetition in the structural content;
+              and enable the .css file to be cached to improve the page load speed between the pages
+              that share the file and its formatting.
+            </p>
+            <p>
+              Separation of formatting and content also makes it feasible to present the same markup
+              page in different styles for different rendering methods, such as on-screen, in print,
+              by voice (via speech-based browser or screen reader), and on Braille-based tactile
+              devices. CSS also has rules for alternate formatting if the content is accessed on a
+              mobile device.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

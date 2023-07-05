@@ -1,0 +1,45 @@
+body {
+  background: #eff1f5;
+  color: #4c4f69;
+  min-height: 300vh;
+  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari,
+    'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  padding: 1rem;
+}
+
+.blue {
+  background: #1e66f5;
+}
+
+.pink {
+  background: #ea76cb;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 6px;
+  padding: 4px;
+  border-radius: 3px;
+  color: #eff1f5;
+  font-weight: bold;
+}
+
+.sticky-container {
+  height: 200px;
+}
+
+.bordered {
+  padding: 3px;
+  border: 1px solid #acb0be;
+  border-radius: 5px;
+}
+
+#position-demo .box {
+  display: inline-block;
+}
+
+#overflow-demo .bordered {
+  padding: 1.5rem;
+  width: 800px;
+}
